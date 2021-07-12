@@ -6,8 +6,8 @@ Write-Verbose -Message "Loading module $ModuleName"
 
 #"Private" Variable to store user configuration settings
 Write-Verbose -message "Creating Module Viarables"
-$PSLogEventSession = [ordered]@{
-    LogFolderPath = $ENV:TEMP
+$PSLogEventSession = @{
+    LogFolderPath = $null
     LogFileName   = $null
 }
 
