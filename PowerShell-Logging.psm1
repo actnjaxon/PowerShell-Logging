@@ -1,5 +1,10 @@
 #Requires -Version 5.1
 
+$ScriptPath = Split-Path $MyInvocation.MyCommand.Path
+$ModuleName = $ExecutionContext.SessionState.Module
+Write-Verbose -Message "Loading module $ModuleName"
+
+#"Private" Variable to store user configuration settings
 Write-Verbose -message "Creating Module Viarables"
 $PSLogEventSession = [ordered]@{
     LogFolderPath = $ENV:TEMP
